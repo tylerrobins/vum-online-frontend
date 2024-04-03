@@ -1,0 +1,164 @@
+.inception-form-page {
+    width: 97%;
+    /* max-width: 600px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.question-page-container {
+    width: 84vw;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.question-page-container.active {
+    display: block;
+}
+
+.question-page-container h2 {
+    margin-block-start: 0.9em;
+    margin-block-end: 0;
+    padding-left: 2px;
+}
+
+.question-page-container h3 {
+    margin-block-end: 0;
+    padding-left: 2px;
+}
+
+.question-page-container h4 {
+    margin-block-start: 0.9em;
+    margin-block-end: 0;
+    padding-left: 2px;
+    font-weight: 400;
+}
+
+.question-page-container p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-left: 2px;
+}
+
+.question-page-container hr {
+    width: 20%;
+    align-self: flex-start;
+    margin: 2vh 5px;
+}
+
+/* QUESTIONS FORM CONTAINER */
+.questions-form-container {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 auto 3vw auto;
+    width: 92vw;
+    max-width: 700px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-height:700px) {
+    .header-container {
+        width: 90%;
+    }
+
+    .header-container img {
+        width: 80%;
+    }
+
+    .header-container h1 {
+        font-size: 1.6em;
+        margin-block-start: 2vh;
+        margin-block-end: 1.5vh;
+    }
+}
+
+@media screen and (max-width: 295px){
+    .cover-option-div{
+        height: 65px;
+    }
+    .cover-options label{
+        padding-right: 60px;
+    }
+}
+
+@media screen and (max-width: 238px) {
+    .cover-options label{
+        padding-right: 22px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .header-container {
+        width: 90%;
+    }
+
+    .header-container img {
+        width: 80%;
+    }
+
+    .header-container h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .questions-form-container {
+        margin: 0 auto 23.4px auto;
+        width: 700px;
+    }
+
+    .question-page-container {
+        width: 700px;
+    }
+
+    .two-radio-btn-container {
+        width: 650px;
+        margin: auto;
+    }
+
+    .single-select-checkbox {
+        width: 313px;
+    }
+
+    button {
+        width: 303px;
+    }
+
+    .question-container input[type=text],
+    .question-container select,
+    .question-container input[type=tel],
+    .question-container textarea {
+        width: 650px;
+        align-self: center;
+    }
+
+    .question-container label {
+        font-size: 1em;
+        margin: 5.43px 0 10.85px 25px;
+        padding: 2px;
+    }
+
+    .question-page-container hr {
+        width: 20%;
+        align-self: flex-start;
+        margin: 21.75px 5px 21.75px 25px;
+    }
+
+    .question-page-container h2, h3, h4, p{
+        margin: 21.75px 0 0 25px;
+    }
+    .cover-options {
+        margin: 21.75px 0 0 25px;
+    }
+}

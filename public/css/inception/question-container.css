@@ -1,0 +1,34 @@
+.question-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-container label {
+    font-size: 1em;
+    margin: 0.5vh 0 1vh 0;
+    padding-left: 2px;
+}
+
+.question-container input[type=text],
+.question-container select,
+.question-container input[type=tel],
+.question-container textarea {
+    width: 100%;
+    padding: 0 15px;
+    height: 45px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0af;
+    border: 1px solid #ffc222;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.question-container ::placeholder {
+    color: var(--text-color);
+    font-size: inherit;
+    font-family: inherit;
+}

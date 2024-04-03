@@ -1,8 +1,8 @@
+@import url(inception.css);
+
 :root{
     --primary-color: #007bff;
     --secondary-color: #6c757d;
     --tertiary-color: #6c757d;
     --text-color: #212529;
 }
-
-@import url(inception.css);
