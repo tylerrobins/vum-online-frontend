@@ -6,3 +6,11 @@
     --tertiary-color: #6c757d;
     --text-color: #212529;
 }
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}

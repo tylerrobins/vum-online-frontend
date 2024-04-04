@@ -3,8 +3,8 @@
 <body>
     <div class="inception-form-page">
         <%- include('header-container') %>
-        <form action="">
-            <div id="page1" class="question-page-container active">
+        <form action="" method="POST">
+            <div id="business-details-form" class="question-page-container">
                 <h2>Business Details</h2>
                 <hr>
                 <div id="business-name-div" class="question-container">
@@ -31,6 +31,9 @@
                     <label for="business_address">What is your business activity?</label>
                     <input type="text" name="business_activity" id="business_activity" placeholder="Business Activity">
                 </div>
+            </div>
+            <div class="btn-container">
+                <button type="submit" id="next_btn">Next</button>
             </div>
         </form>
     </div>

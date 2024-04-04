@@ -3,6 +3,8 @@
 @import url(inception/question-page-container.css);
 @import url(inception/header-container.css);
 @import url(inception/question-container.css);
+@import url(inception/buttons.css);
+
 @import url(inception/business-details.css);
 
 html,
@@ -11,12 +13,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background: #f7f7f7;
-    font-family: 'Arial', sans-serif;
-    color: var(--primary-color);
+    background: #f7f7f76b;
 }
 
 h1 {

@@ -1,0 +1,17 @@
+{
+  "coverSelected": {
+    "coverName": "Trader Diamond",
+    "totalPremium": "300",
+    "Stock & Content Limit": "150000",
+    "Electronics/Tools": "5000",
+    "barNumberLmt": 1,
+    "Personal Accident": "50000",
+    "Public Liability": "500000",
+    "Sarsia Cover Limit": "500000",
+    "Cover Note": "BAR - one specified item"
+  },
+  "first_name": "Tyler",
+  "last_name": "Robins",
+  "citizenship": "sa_citizen",
+  "id_number": "12312"
+}
