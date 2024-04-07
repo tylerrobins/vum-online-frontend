@@ -1,7 +1,7 @@
 {
-  "business_name": "Kingsley Robins",
-  "business_address": "here",
-  "bisAct": "Flooring Installation",
+  "business_name": "Kingsley",
+  "business_address": "Here",
+  "bisAct": "Aircon Services",
   "business_activity": "",
   "coverType": "Artisan",
   "coverSelected": {
@@ -18,5 +18,9 @@
   "first_name": "Tyler",
   "last_name": "Robins",
   "citizenship": "sa_citizen",
-  "id_number": "9512175114086"
+  "id_number": "9512175114086",
+  "barItems": {
+    "Events Hardware": {},
+    "Cell Phone": {}
+  }
 }

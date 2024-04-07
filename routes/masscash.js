@@ -8,6 +8,7 @@ const bisActsList = require('../data/bisActsList')
 const bisActsByType = require('../data/bisActsByType')
 const coverOptionsObj = require('../data/coverOptionsObj')
 const barCategoryList = require('../data/barCategory')
+const barCategoryObj = require('../data/barCatergoryByFields')
 
 const viewsFolder = 'masscash'
 const routeDir = 'masscash'
@@ -96,29 +97,38 @@ router.get('/inception/policy-details/:cellNumber', (req, res) => {
         barCategoryList
     });
 });
-router.post('/inception/policy-details/:cellNumber', (req, res) => {
+router.post('/inception/policy-details/:cellNumber', async (req, res) => {
     const cellNumber = req.params.cellNumber;
     const data = req.body
-    const paramString = ''
+    let paramString = ''
+    const barItemObj = {}
+    const clientData = await readJSON(cellNumber);
     for (let i=0; i < data.barItemsNumDropdown; i++) {
-        paramString += `&barItemCategory${i+1}=${data[`barItemCategory${i+1}`]}`
+        const barItem = data[`barItemCategory${i+1}`]
+        paramString += `&barItemCategory${i+1}=${barItem}`
+        barItemObj[barItem] = {}
     }
-
+    writeJSON(cellNumber, {...clientData, barItems: barItemObj})
     console.log(data)
-    return res.redirect(`/${routeDir}/inception/bar-details/${cellNumber}?barNum=${barItemsNumDropdown}${paramString}`)
+    return res.redirect(`/${routeDir}/inception/bar-details/${cellNumber}?barNum=${data.barItemsNumDropdown}${paramString}`)
 });
 
 // BAR Details
 router.get('/inception/bar-details/:cellNumber', (req, res) => {
     const cellNumber = req.params.cellNumber;
-    
-    return res.json({test: "Test"})    
-    // res.render(`${viewsFolder}/inception-policy-details`,
-    //     {
-    //         cellNumber,
-    //         barNumberLmt
-    //     }
-    // )
+    const barItemsSelected = req.query['barNum'];
+    const barItems = {}
+    for (let i=0; i < barItemsSelected; i++){
+        let item = req.query[`barItemCategory${i+1}`]
+        barItems[item] = barCategoryObj[item]
+    }
+    console.log({ cellNumber: cellNumber, barItemNum: barItemsSelected, barItems: barItems })
+    res.render(`${viewsFolder}/inception-policy-details`,
+        {
+            cellNumber,
+            barItemsSelected
+        }
+    )
 });
 
 router.post('/inception/bar-details/:cellNumber', (req, res) => {
