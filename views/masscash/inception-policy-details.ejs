@@ -18,8 +18,8 @@
                             </select>
                         </div>
                             <div id="number-bar-items-div" class="question-container">
-                                <label for="barItemsNumDropdown">Number of electronic items/tools you are insuring</label>
-                                <select id="barItemsNumDropdown" name="barItemsNumDropdown">
+                                <label for="barItemsSelected">Number of electronic items/tools you are insuring</label>
+                                <select id="barItemsSelected" name="barItemsSelected">
                                     <option value="" disabled selected>Number of Items</option>
                                     <% for (let i=1; i <=barNumberLmt; i++) { %>
                                         <option value="<%= i %>"><%= i %></option>
@@ -28,8 +28,8 @@
                             </div>
                             <% for (let i=1; i <= barNumberLmt; i++) { %>
                             <div id="bar-item-category-div<%=i%>" class="question-container barItemCategoryClass hidden">
-                                <label for="barItemCategory<%=i%>">What category is item <%=i%></label>
-                                <select name="barItemCategory<%=i%>" id="barItemCategory<%=i%>" class="barItemInputClass">
+                                <label for="barItem<%=i%>Category">What category is item <%=i%></label>
+                                <select name="barItem<%=i%>Category" id="barItem<%=i%>Category" class="barItemInputClass">
                                     <option value="" disabled selected>Select Category</option>
                                     <% for (let i=1; i <=barCategoryList.length; i++) { %>
                                         <option value="<%= barCategoryList[i] %>"><%= barCategoryList[i] %></option>
@@ -39,9 +39,11 @@
                             <% } %>
                     </div>
                     <div class="btn-container">
+                        <button id="prev_btn" >Previous</button>
                         <button type="submit" id="next_btn">Next</button>
                     </div>
                 </form>
         </div>
+        <script type="text/javascript" src="/js/inception.js"></script>
         <script type="text/javascript" src="/js/policyDetails.js"></script>
     </body>

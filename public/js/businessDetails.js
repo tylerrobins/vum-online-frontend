@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('business details js loaded')
     const bisActDropdown = document.getElementById('bisAct');
     const otherBisAct = document.getElementById('business-activity-other-div');
     bisActDropdown.addEventListener('change', function () {

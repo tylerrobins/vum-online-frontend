@@ -58,8 +58,7 @@ const barCategoryObj = {
     "Tablet Computer": {
         field1: "Make",
         field2: "Model"
-    },
-    
+    }
 }
 
 module.exports = barCategoryObj

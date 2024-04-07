@@ -1,7 +1,7 @@
 {
-  "business_name": "Kingsley",
-  "business_address": "Here",
-  "bisAct": "Aircon Services",
+  "business_name": "Kingsley Robins",
+  "business_address": "here",
+  "bisAct": "Auto Refurbisher",
   "business_activity": "",
   "coverType": "Artisan",
   "coverSelected": {
@@ -19,8 +19,15 @@
   "last_name": "Robins",
   "citizenship": "sa_citizen",
   "id_number": "9512175114086",
-  "barItems": {
-    "Events Hardware": {},
-    "Cell Phone": {}
+  "barNumberLmt": "3",
+  "inception_date": "8-April-2024",
+  "barItemsSelected": "2",
+  "barItem1Category": "Tablet Computer",
+  "barItem2Category": "Laptop Computer",
+  "Item Details": {
+    "Tablet Computer_field1": "Apple",
+    "Tablet Computer_field2": "Ipad",
+    "Laptop Computer_field1": "Apple",
+    "Laptop Computer_field2": "Macbook Air 15-inch"
   }
 }

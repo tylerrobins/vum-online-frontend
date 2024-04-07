@@ -7,11 +7,6 @@
     height: 45px;
 }
 
-.btn-container #submit_btn,
-#prev_btn {
-    display: none;
-}
-
 button {
     background-color: #013a81;
     color: white;
