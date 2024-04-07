@@ -1,0 +1,58 @@
+<%- include('header-html') %>
+
+    <body>
+        <div class="inception-form-page">
+            <%- include('header-container') %>
+                <form action="" method="POST">
+                    <div id="cover-options-form" class="question-page-container">
+                        <h2>Cover Options</h2>
+                        <h4>Select an option to learn more</h4>
+                        <hr>
+                        <% Object.keys(coverCategoryDetails).forEach((key) => { %>
+                            <div class="cover-option-div">
+                                <input type="radio" id="<%= key.replace(' ', '-') %>" name="coverOpt" value="<%= key %>">
+                                <label for="<%= key.replace(' ', '-') %>">R <%= coverCategoryDetails[key].totalPremium %> - <%= key %></label>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <% if(coverCategoryDetails[key]['Stock & Content Limit'] != '') { %>
+                                    <tr>
+                                        <td class="cover-details-key">Stock &amp; Content Limit</td>
+                                        <td>R <%= coverCategoryDetails[key]['Stock & Content Limit'].replace(/\B(?=(\d{3})+(?!\d))/g, ',') %></td>
+                                    </tr>
+                                    <% } %>
+                                    <% if(coverCategoryDetails[key]['Electronics/Tools'] != '') { %>
+                                    <tr>
+                                        <td class="cover-details-key">Electronics/Tools</td>
+                                        <td>R <%= coverCategoryDetails[key]['Electronics/Tools'].replace(/\B(?=(\d{3})+(?!\d))/g, ',') %></td>
+                                    </tr>
+                                    <% } %>
+                                    <% if(coverCategoryDetails[key]['Personal Accident'] != '') { %>
+                                    <tr>
+                                        <td class="cover-details-key">Personal Accident</td>
+                                        <td>R <%= coverCategoryDetails[key]['Personal Accident'].replace(/\B(?=(\d{3})+(?!\d))/g, ',') %></td>
+                                    </tr>
+                                    <% } %>
+                                    <% if(coverCategoryDetails[key]['Public Liability'] != '') { %>
+                                    <tr>
+                                        <td class="cover-details-key">Public Liability</td>
+                                        <td>R <%= coverCategoryDetails[key]['Public Liability'].replace(/\B(?=(\d{3})+(?!\d))/g, ',') %></td>
+                                    </tr>
+                                    <% } %>
+                                    <% if(coverCategoryDetails[key]['Sarsia Cover Limit'] != '') { %>
+                                    <tr>
+                                        <td class="cover-details-key">Sarsia Cover Limit</td>
+                                        <td>R <%= coverCategoryDetails[key]['Sarsia Cover Limit'].replace(/\B(?=(\d{3})+(?!\d))/g, ',') %></td>
+                                    </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        <% }) %>
+                    </div>
+                    <div class="btn-container">
+                        <button type="submit" id="next_btn">Next</button>
+                    </div>
+                </form>
+        </div>
+        <script type="text/javascript" src="/js/coverOptions.js"></script>
+    </body>

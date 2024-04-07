@@ -1,0 +1,42 @@
+<%- include('header-html') %>
+
+<body>
+    <div class="inception-form-page">
+        <%- include('header-container') %>
+        <form action="" method="POST">
+            <div id="business-details-form" class="question-page-container">
+                <h2>Business Details</h2>
+                <hr>
+                <div id="business-name-div" class="question-container">
+                    <label for="business_name">What is your business name?</label>
+                    <input type="text" name="business_name" id="business_name" placeholder="Business Name" required>
+                </div>
+                <div id="business-address-div" class="question-container">
+                    <label for="business_address">What is your business address?</label>
+                    <input type="text" name="business_address" id="business_address" placeholder="Business Address"
+                        required>
+                </div>
+                <div id="business-activity-div" class="question-container">
+                    <label for="bisActDropdown">Select a Business Activity</label>
+                    <select id="bisAct" name="bisAct">
+                    <option value="" disabled selected>Business Activity</option>
+                        <% for (let i=0; i < bisActsList.length; i++) { %>
+                            <option value="<%= bisActsList[i] %>">
+                                <%= bisActsList[i] %>
+                            </option>
+                        <% } %>
+                    </select>
+                </div>
+                <div id="business-activity-other-div" class="question-container hidden">
+                    <label for="business_address">What is your business activity?</label>
+                    <input type="text" name="business_activity" id="business_activity" placeholder="Business Activity">
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="submit" id="next_btn">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="/js/businessDetails.js"></script>
+</body>

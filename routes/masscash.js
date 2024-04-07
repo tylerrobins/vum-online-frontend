@@ -123,10 +123,10 @@ router.get('/inception/bar-details/:cellNumber', (req, res) => {
         barItems[item] = barCategoryObj[item]
     }
     console.log({ cellNumber: cellNumber, barItemNum: barItemsSelected, barItems: barItems })
-    res.render(`${viewsFolder}/inception-policy-details`,
+    res.render(`${viewsFolder}/inception-bar-details`,
         {
             cellNumber,
-            barItemsSelected
+            barItems
         }
     )
 });
