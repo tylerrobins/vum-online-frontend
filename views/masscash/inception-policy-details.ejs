@@ -27,9 +27,9 @@
                                 </select>
                             </div>
                             <% for (let i=1; i <= barNumberLmt; i++) { %>
-                            <div id="barItemCategory<%=i%>" class="question-container">
+                            <div id="bar-item-category-div<%=i%>" class="question-container barItemCategoryClass hidden">
                                 <label for="barItemCategory<%=i%>">What category is item <%=i%></label>
-                                <select name="barItemCategory<%=i%>" id="barItemCategory<%=i%>">
+                                <select name="barItemCategory<%=i%>" id="barItemCategory<%=i%>" class="barItemInputClass">
                                     <option value="" disabled selected>Select Category</option>
                                     <% for (let i=1; i <=barCategoryList.length; i++) { %>
                                         <option value="<%= barCategoryList[i] %>"><%= barCategoryList[i] %></option>
@@ -43,4 +43,5 @@
                     </div>
                 </form>
         </div>
+        <script type="text/javascript" src="/js/policyDetails.js"></script>
     </body>

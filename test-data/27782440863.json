@@ -1,17 +1,22 @@
 {
+  "business_name": "Kingsley Robins",
+  "business_address": "here",
+  "bisAct": "Flooring Installation",
+  "business_activity": "",
+  "coverType": "Artisan",
   "coverSelected": {
-    "coverName": "Trader Diamond",
+    "coverName": "Artisan Diamond",
     "totalPremium": "300",
-    "Stock & Content Limit": "150000",
-    "Electronics/Tools": "5000",
-    "barNumberLmt": 1,
+    "Stock & Content Limit": "40000",
+    "Electronics/Tools": "15000",
+    "barNumberLmt": 3,
     "Personal Accident": "50000",
     "Public Liability": "500000",
     "Sarsia Cover Limit": "500000",
-    "Cover Note": "BAR - one specified item"
+    "Cover Note": "BAR - three specified items at R5k each"
   },
   "first_name": "Tyler",
   "last_name": "Robins",
   "citizenship": "sa_citizen",
-  "id_number": "12312"
+  "id_number": "9512175114086"
 }

@@ -98,19 +98,27 @@ router.get('/inception/policy-details/:cellNumber', (req, res) => {
 });
 router.post('/inception/policy-details/:cellNumber', (req, res) => {
     const cellNumber = req.params.cellNumber;
-    return res.redirect(`/${routeDir}/inception/bar-details/${cellNumber}`)
+    const data = req.body
+    const paramString = ''
+    for (let i=0; i < data.barItemsNumDropdown; i++) {
+        paramString += `&barItemCategory${i+1}=${data[`barItemCategory${i+1}`]}`
+    }
+
+    console.log(data)
+    return res.redirect(`/${routeDir}/inception/bar-details/${cellNumber}?barNum=${barItemsNumDropdown}${paramString}`)
 });
 
 // BAR Details
 router.get('/inception/bar-details/:cellNumber', (req, res) => {
     const cellNumber = req.params.cellNumber;
     
-    res.render(`${viewsFolder}/inception-policy-details`,
-        {
-            cellNumber,
-            barNumberLmt
-        }
-    )
+    return res.json({test: "Test"})    
+    // res.render(`${viewsFolder}/inception-policy-details`,
+    //     {
+    //         cellNumber,
+    //         barNumberLmt
+    //     }
+    // )
 });
 
 router.post('/inception/bar-details/:cellNumber', (req, res) => {
