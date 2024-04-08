@@ -1,33 +1,26 @@
 {
   "business_name": "Kingsley Robins",
   "business_address": "here",
-  "bisAct": "Auto Refurbisher",
+  "bisAct": "Furniture Shop",
   "business_activity": "",
-  "coverType": "Artisan",
+  "coverType": "Trader",
   "coverSelected": {
-    "coverName": "Artisan Diamond",
-    "totalPremium": "300",
-    "Stock & Content Limit": "40000",
-    "Electronics/Tools": "15000",
-    "barNumberLmt": 3,
-    "Personal Accident": "50000",
-    "Public Liability": "500000",
+    "coverName": "Trader Gold",
+    "totalPremium": "150",
+    "Stock & Content Limit": "75000",
+    "Electronics/Tools": "5000",
+    "barNumberLmt": 1,
+    "Personal Accident": "25000",
+    "Public Liability": "",
     "Sarsia Cover Limit": "500000",
-    "Cover Note": "BAR - three specified items at R5k each"
+    "Cover Note": "BAR - one specified item"
   },
   "first_name": "Tyler",
   "last_name": "Robins",
   "citizenship": "sa_citizen",
   "id_number": "9512175114086",
-  "barNumberLmt": "3",
+  "barNumberLmt": "1",
   "inception_date": "8-April-2024",
-  "barItemsSelected": "2",
-  "barItem1Category": "Tablet Computer",
-  "barItem2Category": "Laptop Computer",
-  "Item Details": {
-    "Tablet Computer_field1": "Apple",
-    "Tablet Computer_field2": "Ipad",
-    "Laptop Computer_field1": "Apple",
-    "Laptop Computer_field2": "Macbook Air 15-inch"
-  }
+  "barItemsSelected": "1",
+  "barItem1Category": "Specialist Machinery"
 }

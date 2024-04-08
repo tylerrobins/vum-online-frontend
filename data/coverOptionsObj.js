@@ -8,7 +8,7 @@ const coverOptsByTypes = {
         "Personal Accident": "25000",
         "Public Liability": "",
         "Sarsia Cover Limit": "500000",
-        "Cover Note": ""
+        "Cover Note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores numquam laborum, recusandae, corporis ab eaque ipsum, qui doloremque at dolorem accusamus. Beatae delectus quidem soluta impedit, blanditiis obcaecati adipisci voluptatibus!"
       },
       "Trader Silver": {
         "totalPremium": "100",

@@ -3,7 +3,7 @@
 <body>
     <div class="inception-form-page">
         <%- include('header-container') %>
-        <form action="" method="POST">
+        <form action="" method="POST" class="questions-form-container">
             <div id="personal-details-form" class="question-page-container">
                 <h2>Personal Details</h2>
                 <hr>
@@ -35,10 +35,11 @@
                 </div>
             </div>
             <div class="btn-container">
-                <button id="prev_btn" >Previous</button>
+                <button id="prev_btn" value="/<%=routeDir%>/inception/cover-options/<%=cellNumber%>">Previous</button>
                 <button type="submit" id="next_btn">Next</button>
             </div>
         </form>
     </div>
     <script type="text/javascript" src="/js/inception.js"></script>
+    <script type="text/javascript" src="/js/personalDetails.js"></script>
 </body>

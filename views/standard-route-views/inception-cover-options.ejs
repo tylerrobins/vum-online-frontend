@@ -3,16 +3,18 @@
     <body>
         <div class="inception-form-page">
             <%- include('header-container') %>
-                <form action="" method="POST">
+                <form action="" method="POST" class="questions-form-container">
                     <div id="cover-options-form" class="question-page-container">
                         <h2>Cover Options</h2>
                         <h4>Select an option to learn more</h4>
                         <hr>
+                        <div class="question-container">
                         <% Object.keys(coverCategoryDetails).forEach((key) => { %>
                             <div class="cover-option-div">
-                                <input type="radio" id="<%= key.replace(' ', '-') %>" name="coverOpt" value="<%= key %>">
+                                <input type="radio" id="<%=key.replace(' ', '-')%>" name="coverOpt" value="<%= key %>" class="coverOpt-class" required>
                                 <label for="<%= key.replace(' ', '-') %>">R <%= coverCategoryDetails[key].totalPremium %> - <%= key %></label>
                             </div>
+                            <div class="cover-details-div hidden" id="cover-details-<%=key.replace(' ', '-')%>">
                             <table>
                                 <tbody>
                                     <% if(coverCategoryDetails[key]['Stock & Content Limit'] != '') { %>
@@ -47,10 +49,17 @@
                                     <% } %>
                                 </tbody>
                             </table>
+                            <% if(coverCategoryDetails[key]['Cover Note'] != '') { %>
+                                <hr>
+                                <h4>Cover Note</h4>
+                                <p><%= coverCategoryDetails[key]['Cover Note']%></p>
+                            <% } %>
+                            </div>
                         <% }) %>
+                        </div>
                     </div>
                     <div class="btn-container">
-                        <button id="prev_btn" >Previous</button>
+                        <button id="prev_btn" value="/<%=routeDir%>/inception/business-details/<%=cellNumber%>">Previous</button>
                         <button type="submit" id="next_btn">Next</button>
                     </div>
                 </form>

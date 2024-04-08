@@ -1,14 +1,16 @@
 @import url(inception.css);
 
 :root{
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --primary-color: #ffc222;
+    --secondary-color: #013a81;
     --tertiary-color: #6c757d;
-    --text-color: #212529;
+    --text-color: #013a81;
+    --secondary-text-color: white
 }
 
 html,
 body {
+    color: var(--text-color);
     min-height: 100vh;
     margin: 0;
     padding: 0;

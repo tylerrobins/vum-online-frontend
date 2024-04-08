@@ -1,15 +1,24 @@
 const router = require('express').Router();
+const routerFunction = require('./routes/standard-route-controller')
 
-// SUB ROUTES IMPORT
-const builders_router = require('./routes/builders');
-const game_router = require('./routes/game');
-const makro_router = require('./routes/makro');
-const masscash_router = require('./routes/masscash');
+// Builders
+const buildersName = 'builders';
+const builders_router = routerFunction(buildersName,'standard-route-views');
+router.use(`/${buildersName}`, builders_router);
 
-// ROUTES
-router.use('/builders', builders_router);
-router.use('/game', game_router);
-router.use('/makro', makro_router);
-router.use('/masscash', masscash_router);
+// Game
+const gameName = 'game';
+const game_router = routerFunction(gameName,'standard-route-views');
+router.use(`/${gameName}`, game_router);
+
+// Makro
+const makroName = 'makro';
+const makro_router = routerFunction(makroName,'standard-route-views');
+router.use(`/${makroName}`, makro_router);
+
+// Masscash
+const masscashName = 'masscash'
+const masscash_router = routerFunction(masscashName,'standard-route-views');
+router.use(`/${masscashName}`, masscash_router);
 
 module.exports = router;

@@ -3,7 +3,7 @@
     <body>
         <div class="inception-form-page">
             <%- include('header-container') %>
-                <form action="" method="POST">
+                <form action="" method="POST" class="questions-form-container">
                     <div id="personal-details-form" class="question-page-container">
                         <h2>Policy Details</h2>
                         <hr>
@@ -28,7 +28,7 @@
                             </div>
                             <% for (let i=1; i <= barNumberLmt; i++) { %>
                             <div id="bar-item-category-div<%=i%>" class="question-container barItemCategoryClass hidden">
-                                <label for="barItem<%=i%>Category">What category is item <%=i%></label>
+                                <label for="barItem<%=i%>Category">What category is Item/Tool <%=i%></label>
                                 <select name="barItem<%=i%>Category" id="barItem<%=i%>Category" class="barItemInputClass">
                                     <option value="" disabled selected>Select Category</option>
                                     <% for (let i=1; i <=barCategoryList.length; i++) { %>
@@ -39,7 +39,7 @@
                             <% } %>
                     </div>
                     <div class="btn-container">
-                        <button id="prev_btn" >Previous</button>
+                        <button id="prev_btn" value="/<%=routeDir%>/inception/personal-details/<%=cellNumber%>">Previous</button>
                         <button type="submit" id="next_btn">Next</button>
                     </div>
                 </form>

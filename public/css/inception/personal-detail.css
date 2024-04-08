@@ -1,0 +1,40 @@
+.two-radio-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    margin-bottom: 10px;
+}
+.single-select-checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0af;
+    border: 1px solid #ffc222;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--text-color);
+    width: 40vw;
+}
+.single-select-checkbox input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+}
+.single-select-checkbox label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 0;
+}
+.single-select-checkbox input[type="radio"]:checked+label {
+    background-color: #ffc222;
+    color: var(--text-color);
+}

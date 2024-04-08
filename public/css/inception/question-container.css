@@ -2,13 +2,11 @@
     display: flex;
     flex-direction: column;
 }
-
 .question-container label {
     font-size: 1em;
     margin: 0.5vh 0 1vh 0;
     padding-left: 2px;
 }
-
 .question-container input[type=text],
 .question-container select,
 .question-container input[type=tel],
@@ -26,8 +24,7 @@
     font-size: 1.2em;
     color: var(--text-color);
 }
-
-.question-container ::placeholder {
+.question-container::placeholder {
     color: var(--text-color);
     font-size: inherit;
     font-family: inherit;
