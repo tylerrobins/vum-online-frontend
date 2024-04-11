@@ -42,7 +42,7 @@ function routerFunction(routerName, viewsFolderName) {
         const cellNumber = req.params.cellNumber;
         const data = req.body;
         data['coverType'] = bisActsByType[data.bisAct];
-        await writeJSON(cellNumber, {...data, channel: routeDir});
+        await writeJSON(cellNumber, { ...data, channel: routeDir });
         return res.redirect(`/${routeDir}/inception/cover-options/${cellNumber}`);
     });
 
@@ -50,13 +50,19 @@ function routerFunction(routerName, viewsFolderName) {
     router.get('/inception/cover-options/:cellNumber', async (req, res) => {
         const cellNumber = req.params.cellNumber;
         const clientData = await readJSON(cellNumber);
-        const coverCategoryDetails = coverOptionsObj[clientData['coverType']];
-        res.render(`${viewsFolder}/inception-cover-options`,
-            {
-                routeDir,
-                cellNumber,
-                coverCategoryDetails
-            });
+        console.log(clientData.bisAct)
+        if (clientData.bisAct == 'Other') {
+            return res.render(`${viewsFolder}/other-business-activity`)
+        } else {
+            const coverCategoryDetails = coverOptionsObj[clientData['coverType']];
+            return res.render(`${viewsFolder}/inception-cover-options`,
+                {
+                    routeDir,
+                    cellNumber,
+                    coverCategoryDetails
+                });
+        }
+
     });
     router.post('/inception/cover-options/:cellNumber', async (req, res) => {
         const cellNumber = req.params.cellNumber;

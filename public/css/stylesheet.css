@@ -5,7 +5,9 @@
     --secondary-color: #013a81;
     --tertiary-color: #6c757d;
     --text-color: #013a81;
-    --secondary-text-color: white
+    --secondary-text-color: white;
+    --background-color: white
+    /* --background-color: #f7f7f76b */
 }
 
 html,

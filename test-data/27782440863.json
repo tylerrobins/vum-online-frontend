@@ -1,26 +1,8 @@
 {
   "business_name": "Kingsley Robins",
   "business_address": "here",
-  "bisAct": "Furniture Shop",
-  "business_activity": "",
-  "coverType": "Trader",
-  "coverSelected": {
-    "coverName": "Trader Gold",
-    "totalPremium": "150",
-    "Stock & Content Limit": "75000",
-    "Electronics/Tools": "5000",
-    "barNumberLmt": 1,
-    "Personal Accident": "25000",
-    "Public Liability": "",
-    "Sarsia Cover Limit": "500000",
-    "Cover Note": "BAR - one specified item"
-  },
-  "first_name": "Tyler",
-  "last_name": "Robins",
-  "citizenship": "sa_citizen",
-  "id_number": "9512175114086",
-  "barNumberLmt": "1",
-  "inception_date": "8-April-2024",
-  "barItemsSelected": "1",
-  "barItem1Category": "Specialist Machinery"
+  "bisAct": "Other",
+  "business_activity": "Other123",
+  "coverType": "Other",
+  "channel": "masscash"
 }
