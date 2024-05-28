@@ -29,9 +29,9 @@ function routerFunction(routerName, viewsFolderName) {
     // Business Details
     router.get('/inception/business-details/:cellNumber', (req, res) => {
         const cellNumber = req.params.cellNumber;
-        console.log(cellNumber)
-        if (!cellNumber || "business-details"){
-            return res.json({failed:"Please insert a cell number as the last route", expect: "..../business-details/PHONE-NUMBER"})
+        console.log(cellNumber);
+        if (!cellNumber) {
+            return res.json({ failed: "Please insert a cell number as the last route", expect: "..../business-details/PHONE-NUMBER" });
         }
         res.render(
             `${viewsFolder}/inception-business-details`,
@@ -57,7 +57,7 @@ function routerFunction(routerName, viewsFolderName) {
         const clientData = await readJSON(cellNumber);
         console.log(clientData.bisAct);
         if (clientData.bisAct == 'Other') {
-            return res.render(`${viewsFolder}/other-business-activity`)
+            return res.render(`${viewsFolder}/other-business-activity`);
         } else {
             const coverCategoryDetails = coverOptionsObj[clientData['coverType']];
             return res.render(`${viewsFolder}/inception-cover-options`,
