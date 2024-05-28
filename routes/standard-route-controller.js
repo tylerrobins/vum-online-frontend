@@ -29,6 +29,10 @@ function routerFunction(routerName, viewsFolderName) {
     // Business Details
     router.get('/inception/business-details/:cellNumber', (req, res) => {
         const cellNumber = req.params.cellNumber;
+        console.log(cellNumber)
+        if (!cellNumber || "business-details"){
+            return res.json({failed:"Please insert a cell number as the last route", expect: "..../business-details/PHONE-NUMBER"})
+        }
         res.render(
             `${viewsFolder}/inception-business-details`,
             {
@@ -37,6 +41,7 @@ function routerFunction(routerName, viewsFolderName) {
             }
         );
     });
+
     router.post('/inception/business-details/:cellNumber', async (req, res) => {
         console.log("Business Details POST");
         const cellNumber = req.params.cellNumber;
@@ -50,7 +55,7 @@ function routerFunction(routerName, viewsFolderName) {
     router.get('/inception/cover-options/:cellNumber', async (req, res) => {
         const cellNumber = req.params.cellNumber;
         const clientData = await readJSON(cellNumber);
-        console.log(clientData.bisAct)
+        console.log(clientData.bisAct);
         if (clientData.bisAct == 'Other') {
             return res.render(`${viewsFolder}/other-business-activity`)
         } else {
@@ -131,7 +136,6 @@ function routerFunction(routerName, viewsFolderName) {
             }
         );
     });
-
     router.post('/inception/bar-details/:cellNumber', async (req, res) => {
         const cellNumber = req.params.cellNumber;
         const clientData = await readJSON(cellNumber);

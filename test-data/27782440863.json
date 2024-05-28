@@ -1,8 +1,28 @@
 {
-  "business_name": "Kingsley Robins",
+  "business_name": "KR",
   "business_address": "here",
-  "bisAct": "Other",
-  "business_activity": "Other123",
-  "coverType": "Other",
-  "channel": "masscash"
+  "bisAct": "Waste Pickers",
+  "business_activity": "spaza shop",
+  "coverType": "Services",
+  "channel": "builders",
+  "coverSelected": {
+    "coverName": "Services Platinum",
+    "totalPremium": "220",
+    "Stock & Content Limit": "30000",
+    "Electronics/Tools": "10000",
+    "barNumberLmt": 2,
+    "Personal Accident": "50000",
+    "Public Liability": "250000",
+    "Sarsia Cover Limit": "500000",
+    "Cover Note": "BAR - two specified items at R5k each"
+  },
+  "first_name": "Tyler",
+  "last_name": "Robins",
+  "citizenship": "sa_citizen",
+  "id_number": "13414124",
+  "barNumberLmt": "2",
+  "inception_date": "12-April-2024",
+  "barItemsSelected": "2",
+  "barItem1Category": "Helmet",
+  "barItem2Category": "Laptop Computer"
 }
