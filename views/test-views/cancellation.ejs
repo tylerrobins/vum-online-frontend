@@ -1,5 +1,4 @@
 <%- include('header-html') %>
-
     <body>
         <div class="inception-form-page">
             <%- include('header-container') %>
@@ -7,6 +6,33 @@
                     <div id="cancellation-form" class="question-page-container">
                         <h2>Cancellation</h2>
                         <hr>
+                        <div id="cancellation-opt-div" class="question-container">
+                            <label for="cancel-opt">Reasons for cancellation</label>
+                            <select id="cancel-opt" name="cancel-opt">
+                            <option value="" disabled selected>Cancellation Reasons</option>
+                                <% for (let i=0; i < cancellationList.reasons.length; i++) { %>
+                                    <option value="<%= cancellationList.reasons[i] %>">
+                                        <%= cancellationList.reasons[i] %>
+                                    </option>
+                                <% } %>
+                            </select>
+                        </div>
+                         
+                        <div id="cancellation-other-div" class="question-container">
+                            <label for="cancellation-other">If 'other reasons' was selected tell us the reason</label>
+                            <input type="text" name="cancellation-other" id="cancellation-other" placeholder="Other Reasons" required disabled>
+                        </div>
+                        <div id="cancellation-date-div" class="question-container">
+                            <label for="cancellation-date-div">Choose date you wish to cancel on</label>
+                            <select id="cancel-date" name="cancel-date">
+                            <option value="" disabled selected>Cancellation Date</option>
+                                <% for (let i=0; i < cancellationDateList.length; i++) { %>
+                                    <option value="<%= cancellationDateList[i] %>">
+                                        <%= cancellationDateList[i] %>
+                                    </option>
+                                <% } %>
+                            </select>
+                        </div>
                     </div>
                 </form>
         </div>

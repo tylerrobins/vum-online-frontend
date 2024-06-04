@@ -1,13 +1,50 @@
 <%- include('header-html') %>
 
-    <body>
-        <div class="inception-form-page">
-            <%- include('header-container') %>
-                <form action="" method="POST" class="questions-form-container">
-                    <div id="debit-order-form" class="question-page-container">
-                        <h2>Debit Order</h2>
-                        <hr>
+<body>
+    <div class="inception-form-page">
+        <%- include('header-container') %>
+            <form action="" method="POST" class="questions-form-container">
+                <div id="debit-order-form" class="question-page-container">
+                    <h2>Debit Order</h2>
+                    <hr>
+                    <div id="debit-day-div" class="question-container">
+                        <label for="debit-day">Debit Day</label>
+                        <select id="debit-day" name="debit-day">
+                            <% for (let i = 1; i <= 31; i++) { %>
+                                <option value="<%= i %>"><%= i %></option>
+                            <% } %>
+                        </select>
                     </div>
-                </form>
-        </div>
-    </body>
+                    <div id="bank-div" class="question-container">
+                        <label for="bank">Bank</label>
+                        <select id="bank" name="bank">
+                            <option value="" disabled selected>Select Bank</option>
+                            <% for (let i = 0; i < bankList.length; i++) { %>
+                                <option value="<%= bankList[i] %>"><%= bankList[i] %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div id="branch-code-div" class="question-container">
+                        <label for="branch-code">Branch Code</label>
+                        <input type="text" name="branch-code" id="branch-code" placeholder="Branch Code" required>
+                    </div>
+                    <div id="account-type-div" class="question-container">
+                        <label for="account-type">Account Type</label>
+                        <select id="account-type" name="account-type">
+                            <option value="cheque">Cheque</option>
+                            <option value="savings">Savings</option>
+                        </select>
+                    </div>
+                    <div id="account-holder-div" class="question-container">
+                        <label for="account-holder">Account Holder</label>
+                        <input type="text" name="account-holder" id="account-holder" placeholder="Account Holder" required>
+                    </div>
+                    <div id="account-number-div" class="question-container">
+                        <label for="account-number">Account Number</label>
+                        <input type="text" name="account-number" id="account-number" placeholder="Account Number" required>
+                    </div>
+                </div>
+            </form>
+    </div>
+</body>
+

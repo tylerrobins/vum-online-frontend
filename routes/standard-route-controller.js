@@ -1,6 +1,6 @@
 function routerFunction(routerName, viewsFolderName) {
     const dateOptions = require('../data/inceptionDateLogic');
-    const { writeJSON, readJSON, readWrtieJSON } = require('../test-data/readAndWrite');
+    const { writeJSON, readJSON, readWriteJSON } = require('../test-data/readAndWrite');
 
     // DATA IMPORTS
     const bisActsList = require('../data/bisActsList');
